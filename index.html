@@ -5519,16 +5519,52 @@
 
     function mediaSizer() {
         // Determines the correct viz layout according to screen sizes.
-        if (window.matchMedia("(max-width: 480px)").matches) {
+        if (window.matchMedia("(max-width: 450px)").matches) {
             //alert("I am a phone layout!");
             devType = 'phone';
             vWidth = 450;
             vHeight = 2000;
+            console.log("devtype: " + devType)
+        console.log("launch0")
+        launchViz(0);
+
+        vHeight = 1200;
+        launchViz(1);
+        vHeight = 2800;
+        
+      
+        //launchViz(3);
+       
+        launchViz(4);
+       vHeight = 1800;
+        launchViz(5);
+
+ vHeight = 1400;
+        launchViz(7);
+      
+
+       
             //options.device = 'phone';
         } else if (window.matchMedia("(max-width: 980px)").matches) {
             //alert("I am a tablet layout!");
             devType = 'tablet';
             vWidth = 980;
+vHeight = 2000;
+            launchViz(0);
+
+vHeight = 1200;
+launchViz(1);
+vHeight = 2800;
+
+
+//launchViz(3);
+
+launchViz(4);
+vHeight = 1800;
+launchViz(5);
+
+vHeight = 1400;
+launchViz(7);
             //options.device = 'tablet';
         } else {
             //alert("I am a desktop layout!");
@@ -5536,7 +5572,7 @@
              vWidth = 1666;
             vHeight = 800;
             //options.device = 'desktop';
-        }
+        
         console.log("devtype: " + devType)
         console.log("launch0")
         launchViz(0);
@@ -5550,10 +5586,10 @@
         console.log("launch3")
         //launchViz(3);
         launchViz(4);
-        vHideToolbar=true;
-            vHideTabs= true;
+ 
         launchViz(5);
-        launchViz(6);
+        vHeight = 1000;
+        launchViz(7);
         
         
         vHideToolbar=false;
@@ -5569,6 +5605,7 @@
         launchViz(13);
 
         // Launches the viz again with the new sizing at the current index of vizList.
+        }
     }
 
 
